@@ -1,0 +1,36 @@
+/* esto es para que la imagen de la portada no tenga margen*/
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+.portada{
+    /*Aqui se centra y se edita la imagen y el texto de portada */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: arial;
+    color: rgb(255, 255, 255);
+    background-image: url(./portada.png);
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-color:rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+
+    /*Tamaño de texto y espacio entre el parrafo*/
+    h1{
+        font-size: 50px;
+        margin-bottom: 5px;
+    }
+    /*tamaño de parrafo y espacio de titulo*/
+    p{
+        font-size: 30px;
+        margin-top: 1;
+    }
+}
