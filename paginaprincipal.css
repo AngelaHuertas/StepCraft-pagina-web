@@ -1,15 +1,14 @@
-/* esto es para que la imagen de la portada no tenga margen*/
-
-html, body{
+/* Esto es para que la imagen de la portada no tenga margen */
+html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
 }
 
-
-.portada{
-    /*Aqui se centra y se edita la imagen y el texto de portada */
+/* Estilo para la sección de portada */
+.portada {
+    /* Centra y edita la imagen y el texto de la portada */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,17 +19,120 @@ html, body{
     height: 500px;
     background-size: cover;
     background-position: center;
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: darken;
+}
 
-    /*Tamaño de texto y espacio entre el parrafo*/
-    h1{
-        font-size: 50px;
-        margin-bottom: 5px;
-    }
-    /*tamaño de parrafo y espacio de titulo*/
-    p{
-        font-size: 30px;
-        margin-top: 1;
-    }
+/* Estilo para el título de la portada */
+.portada h1 {
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+/* Estilo para el párrafo de la portada */
+.portada p {
+    font-size: 30px;
+    margin-top: 1;
+}
+
+/* Estilo para el contenedor de tarjetas */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Estilo para las tarjetas dentro del contenedor */
+.container .card {
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+/* Estilo para el efecto de hover en las tarjetas */
+.container .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para las imágenes dentro de las tarjetas */
+.container .card img {
+    width: 330px;
+    height: 220px;
+}
+
+/* Estilo para el encabezado dentro de las tarjetas */
+.container .card h4 {
+    font-weight: 600;
+    font-family: arial;
+}
+
+/* Estilo para los párrafos dentro de las tarjetas */
+.container .card p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: arial;
+}
+
+/* Estilo para los enlaces dentro de las tarjetas */
+.container .card a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Estilo general para las tarjetas */
+.card {
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    border: 1;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Estilo para la imagen que aparece al pasar el ratón sobre la tarjeta */
+.card-img-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+/* Estilo para la imagen principal de la tarjeta al pasar el ratón */
+.card:hover .card-img-hover {
+    opacity: 1;
+}
+
+/* Estilo para ocultar la imagen principal al pasar el ratón */
+.card:hover .card-img-principal {
+    opacity: 0;
+}
+
+/* Estilo para los botones */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #53e7ca;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para el efecto de hover en los botones */
+.btn:hover {
+    background-color: #45c7a5;
 }
