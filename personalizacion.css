@@ -1,0 +1,139 @@
+/* esto es para que la imagen de la portada no tenga margen*/
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+.portada{
+    /*Aqui se centra y se edita la imagen y el texto de portada */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: arial;
+    color: rgb(255, 255, 255);
+    background-image: url(./portada.png);
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    background-color:rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+
+    /*Tamaño de texto y espacio entre el parrafo*/
+    h1{
+        font-size: 50px;
+        margin-bottom: 1px;
+    }
+    /*tamaño de parrafo y espacio de titulo*/
+    p{
+        font-size: 30px;
+        margin-top: 1;
+    }
+}
+.box1{
+    display: flex;
+    flex-direction: row;
+    font-family: arial;
+    background-color: rgba(240, 248, 255, 0.584);
+    height: 650px;
+    width: 1200px;
+    top: 20px;
+    gap: 5px;
+}
+.box2{
+    display: flex;
+    
+    position: relative;
+    font-family: arial;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 550px;
+    top: 25px;
+    left: 50px;
+    background-color: rgba(0, 0, 255, 0);
+    gap: 5px;
+    justify-content: center;
+}
+.box3img{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    
+    border: 3px solid #f0841100;
+    
+}
+.box3opciones{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: arial;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 550px;
+    top: 25px;
+    left: 50px;
+    background-color: rgba(0, 0, 255, 0);
+    gap: 5px;  
+   flex-shrink: 0
+}
+.main-image {
+    justify-content: center;
+    position: relative;
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #f0841100;
+  }
+  .thumbnail {
+    position: relative;
+    width: 200px;
+    height: 220px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    flex-shrink: 0;
+    
+  }
+  .thumbnail-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  label {
+    margin-top: 5px;
+    font-weight: bold;
+    color: black;
+    font-family: arial;
+    font-size: 20px;
+  }
+  
+  select, input {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 150px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #cd8b21;
+    color: rgb(1, 1, 1);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #eb950c;
+  }
+  .totales{
+    font-size: 10px;
+    color: black;
+  }
