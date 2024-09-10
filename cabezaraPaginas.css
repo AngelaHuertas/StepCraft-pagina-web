@@ -13,9 +13,14 @@ header {
     z-index: 1000; 
 }
 
-/* Deja un espacio arriba de la página para que el contenido no quede escondido por el encabezado que está fijo */
+/* Deja un espacio arriba de la página para que el contenido no quede escondido por el encabezado que está fijo y fuente de tipografia */
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 body {
-    margin-top: 80px; }
+    margin-top: 80px; 
+    height: 100%; 
+	font-family: 'Noto Sans', sans-serif;
+    background-color: #ffffff; 
+}
 
 /* Estilo para el logotipo */
 .logo img {
@@ -39,11 +44,10 @@ nav ul li a {
     font-weight: bold;
     padding-bottom: 5px;
     position: relative;
-    font-family: Arial;
 }
 
 nav ul li a.active {
-    border-bottom: 3px solid #6df9de; /* La raya que aparece al cambiar de página, esto lo ponemos con JS */
+    border-bottom: 3px solid #75b9d4; /* La raya que aparece al cambiar de página, esto lo ponemos con JS */
 }
 
 /* Estilo para el buscador */
@@ -59,7 +63,7 @@ nav ul li a.active {
 
 .search-bar button {
     padding: 5px 10px;
-    background-color: #53e7ca;
+    background-color: #75b9d4;
     color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;

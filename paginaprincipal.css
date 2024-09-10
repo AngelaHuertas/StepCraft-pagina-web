@@ -1,9 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+
 /* Esto es para que la imagen de la portada no tenga margen */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
+    height: 100%; 
+	font-family: 'Noto Sans', sans-serif;
+    background-color: #ffffff; 
 }
 
 /* Estilo para la sección de portada */
@@ -13,7 +19,6 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: arial;
     color: rgb(255, 255, 255);
     background-image: url(./portada.png);
     height: 500px;
@@ -73,7 +78,6 @@ html, body {
 /* Estilo para el encabezado dentro de las tarjetas */
 .container .card h4 {
     font-weight: 600;
-    font-family: arial;
 }
 
 /* Estilo para los párrafos dentro de las tarjetas */
@@ -81,7 +85,6 @@ html, body {
     padding: 0 1rem;
     font-size: 16px;
     font-weight: 300;
-    font-family: arial;
 }
 
 /* Estilo para los enlaces dentro de las tarjetas */
@@ -124,7 +127,7 @@ html, body {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #53e7ca;
+    background-color: #75b9d4;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -134,5 +137,5 @@ html, body {
 
 /* Estilo para el efecto de hover en los botones */
 .btn:hover {
-    background-color: #45c7a5;
+    background-color: #75b9d4;
 }

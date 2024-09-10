@@ -128,7 +128,7 @@ html, body {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #53e7ca;
+    background-color: #75b9d4;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -138,5 +138,5 @@ html, body {
 
 /* Estilo para el efecto de hover en los botones */
 .btn:hover {
-    background-color: #45c7a5;
+    background-color: #75b9d4;
 }
