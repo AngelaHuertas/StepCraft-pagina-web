@@ -10,28 +10,22 @@
 </head>
 <body>
     <header>
-
         <!-- Logotipo -->
        <div class="logo">
            <a href="./paginaPrincipalAngela.html" class="ini-icon"><img src="logo_zapateria.png" alt="Logotipo de la tienda"></a>
        </div>
-
        <!-- Barra de navegación -->
-
        <nav>
         <ul>
             <li><a href="./ofertasShaira.html"> Ofertas</a></li>
             <li><a href="./contactoSebastian.html"> Contactos</a></li>
         </ul>
-        </nav>
-         
+        </nav>  
         <!-- Buscador -->
-
        <div class="search-bar">
            <input type="text" placeholder="Buscar productos...">
            <button type="submit">Buscar</button>
        </div>
-
        <!-- Carrito -->
        <div class="user-options">
            <a href="./carritoJulian.html" class="cart-icon">
@@ -45,19 +39,22 @@
     <div class="portada">
         <div class="box1">
             <!-- CONTENEDOR IZQUIERDO IMAGENES -->
-            <div class="box2">
+            <div class="box2mod">
                 <img id="mainImage" src="../StepCraft-pagina-web/productos/nike1.1.png" alt="Imagen central" class="main-image">
                 <div class="box3img">
                     <div class="thumbnail-container">
-                        <img src="../StepCraft-pagina-web/productos/nike1.1.png" alt="Imagen 1" class="thumbnail">
-                        <img src="../StepCraft-pagina-web/productos/nike1.2.png" alt="Imagen 2" class="thumbnail">
-                        <img src="../StepCraft-pagina-web/productos/nike1.3.png" alt="Imagen 3" class="thumbnail">
-                        <img src="../StepCraft-pagina-web/productos/nike1.4.png" alt="Imagen 4" class="thumbnail">
+                        <img src="../StepCraft-pagina-web/productos/nike1.1.png" alt="Imagen 1" class="thumbnail" id="imagen1">
+                        <img src="../StepCraft-pagina-web/productos/nike1.2.png" alt="Imagen 2" class="thumbnail" id="imagen2">
+                        <img src="../StepCraft-pagina-web/productos/nike1.3.png" alt="Imagen 3" class="thumbnail" id="imagen3">
                     </div>
                 </div>
             </div>
             <!-- CONTENEDOR DERECHO OPCIONES -->
             <div class="box3opciones">
+                <h3></h3>
+                <h3></h3>
+                <h3></h3>
+                <label>Escoje tus alternativas favoritas <br>y personaliza tus tenis!</label>
                 <label for="talla">Talla:</label>
                 <select id="talla">
                   <option value="38">38</option>
@@ -65,15 +62,20 @@
                   <option value="40">40</option>
                   <option value="41">41</option>
                 </select>
-          
-                <label for="color">Color:</label>
+                <label for="color">Color Base:</label>
                 <select id="color">
                   <option value="Negro">Negro</option>
                   <option value="Blanco">Blanco</option>
                   <option value="Azul">Azul</option>
                   <option value="Rojo">Rojo</option>
                 </select>
-          
+                <label for="logo">Color Logo:</label>
+                <select id="logo">
+                  <option value="Negro">Negro</option>
+                  <option value="Blanco">Blanco</option>
+                  <option value="Azul">Azul</option>
+                  <option value="Rojo">Rojo</option>
+                </select>
                 <label for="cordon">Color del cordón:</label>
                 <select id="cordon">
                   <option value="Negro">Negro</option>
@@ -81,11 +83,12 @@
                   <option value="Rojo">Rojo</option>
                   <option value="Azul">Azul</option>
                 </select>
-          
-                <label for="horma">Horma:</label>
-                <select id="horma">
-                  <option value="Ajustado">Ajustado</option>
-                  <option value="Ancho">Ancho</option>
+                <label for="diseño">Diseño (Dibujo)</label>
+                <select id="diseño">
+                  <option value="Dragon">Dragon ball</option>
+                  <option value="Onepiece">One Piece</option>
+                  <option value="Naruto">Naruto</option>
+                  <option value="Simpsons">Los Simpsons</option>
                 </select>
           
                 <label for="cantidad">Cantidad:</label>

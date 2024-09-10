@@ -30,7 +30,7 @@ html, body{
     }
     /*tamaño de parrafo y espacio de titulo*/
     p{
-        font-size: 30px;
+        font-size: 20px;
         margin-top: 1;
     }
 }
@@ -43,42 +43,41 @@ html, body{
     width: 1200px;
     top: 20px;
     gap: 5px;
+    border-radius: 8px;
 }
-.box2{
-    display: flex;
-    
-    position: relative;
-    font-family: arial;
-    flex-wrap: wrap;
-    height: 600px;
-    width: 550px;
-    top: 25px;
-    left: 50px;
-    background-color: rgba(0, 0, 255, 0);
-    gap: 5px;
-    justify-content: center;
+
+.box2mod {
+  width: 600px;
+  height: 550px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  text-align: center;
+  background-color: rgb(252, 252, 252);
+  flex-shrink: 0;
 }
 .box3img{
     display: flex;
     flex-direction: row;
     overflow-x: auto;
-    
     border: 3px solid #f0841100;
     
 }
 .box3opciones{
     display: flex;
     flex-direction: column;
-    position: relative;
     font-family: arial;
-    flex-wrap: wrap;
-    height: 600px;
-    width: 550px;
+    justify-content: center;
+    height: 530px;
+    width: 450px;
     top: 25px;
     left: 50px;
-    background-color: rgba(0, 0, 255, 0);
-    gap: 5px;  
-   flex-shrink: 0
+    background-color: rgb(255, 255, 255);
+    gap: 1.5px;
+    overflow: auto;
+    border-radius: 8px;
+    margin: 20px;
+    border: 10px solid rgb(255, 255, 255);
 }
 .main-image {
     justify-content: center;
@@ -86,17 +85,18 @@ html, body{
     width: 500px;
     height: 300px;
     object-fit: cover;
-    margin-bottom: 20px;
-    border: 5px solid #f0841100;
   }
   .thumbnail {
-    position: relative;
-    width: 200px;
-    height: 220px;
+    
+    width: 180px;
+    height: 190px;
     object-fit: cover;
     cursor: pointer;
     border: 2px solid transparent;
-    flex-shrink: 0;
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
     
   }
   .thumbnail-container {
@@ -122,16 +122,17 @@ html, body{
   
   button {
     padding: 10px 20px;
-    background-color: #cd8b21;
+    background-color: #53e7ca;
     color: rgb(1, 1, 1);
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
+    max-width: 80%;
   }
   
   button:hover {
-    background-color: #eb950c;
+    background-color: #53e7ca;
   }
   .totales{
     font-size: 10px;

@@ -1,4 +1,4 @@
-// Seleccionamos la imagen principal
+/*// Seleccionamos la imagen principal
 const mainImage = document.getElementById('mainImage');
 
 // Seleccionamos todas las miniaturas
@@ -46,4 +46,25 @@ agregarCarritoBtn.addEventListener('click', function() {
     Horma: ${horma}
     Cantidad: ${cantidad}
     Precio total: $${precioTotal}`);
-});
+});*/
+const mainImage = document.getElementById('mainImage');
+    const diseñoSelect = document.getElementById('diseño');
+
+    // Función para cambiar la imagen según el diseño seleccionado
+    function cambiarImagen() {
+        const diseñoSeleccionado = diseñoSelect.value;
+        
+        // Cambiar la imagen dependiendo del valor seleccionado
+        if (diseñoSeleccionado === 'Naruto') {
+            mainImage.src = '../StepCraft-pagina-web/productos/nike1.1.png'; // Imagen para Naruto
+        } else if (diseñoSeleccionado === 'Dragon') {
+            mainImage.src = '../StepCraft-pagina-web/productos/nike1.2.png'; // Imagen para Dragon Ball
+        } else if (diseñoSeleccionado === 'Onepiece') {
+            mainImage.src = '../StepCraft-pagina-web/productos/nike1.3.png'; // Imagen para One Piece
+        } else if (diseñoSeleccionado === 'Simpsons') {
+            mainImage.src = '../StepCraft-pagina-web/productos/nike1.4.png'; // Imagen para Los Simpsons
+        }
+    }
+
+    // Escuchar el evento de cambio en el select de diseño
+    diseñoSelect.addEventListener('change', cambiarImagen);
