@@ -10,7 +10,7 @@ thumbnails.forEach((thumbnail) => {
     // Cambiamos la imagen principal por la que se clicó
     mainImage.src = this.src;
   });
-});
+});*/
 // Variables
 const cantidadInput = document.getElementById('cantidad');
 const precioSpan = document.getElementById('precio');
@@ -46,25 +46,87 @@ agregarCarritoBtn.addEventListener('click', function() {
     Horma: ${horma}
     Cantidad: ${cantidad}
     Precio total: $${precioTotal}`);
-});*/
-const mainImage = document.getElementById('mainImage');
-    const diseñoSelect = document.getElementById('diseño');
+});
+const mainImage = document.getElementById('mainImage');//ubicar la imagen donde se posiciona zapato base
+const img1 = document.getElementById('imagen1');//ubicar la imagen donde se posiciona cordon
+const img2 = document.getElementById('imagen2');//ubicar la imagen donde se posiciona cordon
+const img3 = document.getElementById('imagen3');//ubicar la imagen donde se posiciona diseño
+const tenisBaseSelect = document.getElementById('tenisBase');//ubicar la encuesta relacionada con la imagen zapato base
+const logoSelect = document.getElementById('logo');//ubicar la encuesta relacionada con la imagen cordon
+const cordonSelect = document.getElementById('cordon');//ubicar la encuesta relacionada con la imagen cordon
+const diseñoSelect = document.getElementById('diseño');//ubicar la encuesta relacionada con la imagen diseño
 
-    // Función para cambiar la imagen según el diseño seleccionado
-    function cambiarImagen() {
-        const diseñoSeleccionado = diseñoSelect.value;
-        
-        // Cambiar la imagen dependiendo del valor seleccionado
-        if (diseñoSeleccionado === 'Naruto') {
-            mainImage.src = '../StepCraft-pagina-web/productos/nike1.1.png'; // Imagen para Naruto
-        } else if (diseñoSeleccionado === 'Dragon') {
-            mainImage.src = '../StepCraft-pagina-web/productos/nike1.2.png'; // Imagen para Dragon Ball
-        } else if (diseñoSeleccionado === 'Onepiece') {
-            mainImage.src = '../StepCraft-pagina-web/productos/nike1.3.png'; // Imagen para One Piece
-        } else if (diseñoSeleccionado === 'Simpsons') {
-            mainImage.src = '../StepCraft-pagina-web/productos/nike1.4.png'; // Imagen para Los Simpsons
-        }
-    }
+// Función para cambiar la imagen según el diseño seleccionado
+function imagenDiseño() {
+  const diseño = diseñoSelect.value;
+  // Cambiar la imagen dependiendo del valor seleccionado
+  if (diseño === 'n/a') {
+      img3.src = '../StepCraft-pagina-web/PersonalizacionJulian/0logo_zapateria_2.png'; // Imagen logo
+  } else if (diseño === 'onePiece') {
+    img3.src = '../StepCraft-pagina-web/PersonalizacionJulian/mod1.jpeg'; // Imagen para onePiece
+  } else if (diseño === 'harryPotter') {
+      img3.src = '../StepCraft-pagina-web/PersonalizacionJulian/mod2.jpeg'; // Imagen para harryPotter
+  } else if (diseño === 'naruto') {
+      img3.src = '../StepCraft-pagina-web/PersonalizacionJulian/mod3.png'; // Imagen para naruto
+  } else if (diseño === 'pokemon') {
+      img3.src = '../StepCraft-pagina-web/PersonalizacionJulian/mod4.png'; // Imagen para pokemon
+  } else if (diseño === 'alas') {
+    img3.src = '../StepCraft-pagina-web/PersonalizacionJulian/mod5.png'; // Imagen para alas
+  } else if (diseño === 'Avatar') {
+    img3.src = '../StepCraft-pagina-web/PersonalizacionJulian/mod6.png'; // Imagen para Avatar
+  }
+}
+// Función para cambiar la imagen según el Tenis Base seleccionado
+function imagenTenisbase() {
+  const tenisBase = tenisBaseSelect.value;
+  // Cambiar la imagen dependiendo del valor seleccionado
+  if (tenisBase === 'n/a') {
+      mainImage.src = '../StepCraft-pagina-web/PersonalizacionJulian/0logo_zapateria_2.png'; // Imagen logo
+  } else if (tenisBase === 'nikeDunk') {
+      mainImage.src = '../StepCraft-pagina-web/PersonalizacionJulian/1nikedunklow.png'; // Imagen para nikeDunk
+  } else if (tenisBase === 'adidasCourt') {
+      mainImage.src = '../StepCraft-pagina-web/PersonalizacionJulian/2adidascourtblock.png'; // Imagen para adidasCourt
+  } else if (tenisBase === 'adidasAdvantage') {
+      mainImage.src = '../StepCraft-pagina-web/PersonalizacionJulian/3adidasadvantage.png'; // Imagen para adidasAdvantage
+  } else if (tenisBase === 'nikePegasus') {
+      mainImage.src = '../StepCraft-pagina-web/PersonalizacionJulian/4nikepegasus.png'; // Imagen para nikePegasus
+  } 
+}
+// Función para cambiar la imagen según el Tenis Base seleccionado
+function imagenCordon() {
+  const cordon = cordonSelect.value;
+  // Cambiar la imagen dependiendo del valor seleccionado
+  if (cordon === 'n/a') {
+      img2.src = '../StepCraft-pagina-web/PersonalizacionJulian/0logo_zapateria_2.png'; // Imagen logo
+  } else if (cordon === 'Negro') {
+      img2.src = '../StepCraft-pagina-web/PersonalizacionJulian/cordon1.webp'; // Imagen para Negro
+  } else if (cordon === 'Blanco') {
+      img2.src = '../StepCraft-pagina-web/PersonalizacionJulian/cordon3.webp'; // Imagen para Blanco
+  } else if (cordon === 'Rojo') {
+      img2.src = '../StepCraft-pagina-web/PersonalizacionJulian/cordon4.webp'; // Imagen para Rojo
+  } else if (cordon === 'Azul') {
+      img2.src = '../StepCraft-pagina-web/PersonalizacionJulian/cordon2.webp'; // Imagen para Azul
+  } 
+}
+// Función para cambiar la imagen según el Logo seleccionado
+function imagenLogo() {
+  const logo = logoSelect.value;
+  // Cambiar la imagen dependiendo del valor seleccionado
+  if (logo === 'n/a') {
+      img1.src = '../StepCraft-pagina-web/PersonalizacionJulian/0logo_zapateria_2.png'; // Imagen logo
+  } else if (logo === 'Negro') {
+      img1.src = '../StepCraft-pagina-web/PersonalizacionJulian/1.1nikedunklowlogonegro.jpg'; // Imagen para Negro
+  } else if (logo === 'Blanco') {
+      img1.src = '../StepCraft-pagina-web/PersonalizacionJulian/1nikedunklow.png'; // Imagen para Blanco
+  } else if (logo === 'Rojo') {
+      img1.src = '../StepCraft-pagina-web/PersonalizacionJulian/1.1nikedunklowlogorojo.jpg'; // Imagen para Rojo
+  } else if (logo === 'Azul') {
+      img1.src = '../StepCraft-pagina-web/PersonalizacionJulian/1.1nikedunklowlogoazul.jpg'; // Imagen para Azul
+  } 
+}
 
-    // Escuchar el evento de cambio en el select de diseño
-    diseñoSelect.addEventListener('change', cambiarImagen);
+// Escuchar el evento de cambio en el select de diseño
+diseñoSelect.addEventListener('change', imagenDiseño);
+logoSelect.addEventListener('change', imagenLogo);
+cordonSelect.addEventListener('change', imagenCordon);
+tenisBaseSelect.addEventListener('change', imagenTenisbase);
