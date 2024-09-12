@@ -120,7 +120,7 @@ opacity: 1;
     text-decoration: none;
     color: #000000;
 }
-
+/* etiqueta de dcto*/
 .discount-tag {
     position: absolute;
     top: 10px;
@@ -133,7 +133,7 @@ opacity: 1;
     border-radius: 5px;
     transform: rotate(-20deg);
     transform-origin: 0 0;
-    z-index: 1; /* Asegúrate de que la etiqueta esté por encima de la imagen */
+    z-index: 1; 
 }
 /* Estilo general para las tarjetas */
 .card {
