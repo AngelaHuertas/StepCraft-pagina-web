@@ -52,3 +52,56 @@ function buscadorInterno(){
         }
     }
 }
+
+let slideIndex = 0;
+let intervalId = null;
+
+// Función para mostrar la imagen actual
+
+function showSlide(index) {
+    const imagenes = document.querySelectorAll(".imagenes-container .imagen-promo");
+
+    if (index >= imagenes.length) {
+        slideIndex = 0;
+    } else if (index < 0) {
+        slideIndex = imagenes.length - 1;
+    } else {
+        slideIndex = index;
+    }
+
+    imagenes.forEach(slide => {
+        slide.classList.remove("displaySlide");
+    });
+    imagenes[slideIndex].classList.add("displaySlide");
+}
+
+// Función para mostrar la imagen anterior
+function prevSlide() {
+    clearInterval(intervalId); // Detiene el intervalo automático
+    slideIndex--;
+    showSlide(slideIndex);
+    restartInterval(); // Reiniciar el intervalo automático
+}
+
+// Función para mostrar la siguiente imagen
+function nextSlide() {
+    clearInterval(intervalId); // Detiene el intervalo automático
+    slideIndex++;
+    showSlide(slideIndex);
+    restartInterval(); // Reiniciar el intervalo automático
+}
+
+// Función para reiniciar el intervalo automático
+function restartInterval() {
+    intervalId = setInterval(nextSlide, 5000); // Cambia de imagen cada 5 segundos
+}
+
+// Iniciar el slider automáticamente cuando el DOM esté cargado
+document.addEventListener("DOMContentLoaded", function() {
+    const imagenes = document.querySelectorAll(".imagenes-container .imagen-promo");
+
+    if (imagenes.length > 0) {
+        showSlide(slideIndex); // Muestra primera imagen
+        intervalId = setInterval(nextSlide, 5000); // Cambia de imagen cada 5 segundos
+    }
+});

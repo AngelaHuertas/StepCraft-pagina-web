@@ -1,20 +1,17 @@
-let productos =[
-  { nombre : "nikeDunk",
-    precio : 220000
-  },
-  { nombre : "nikePegasus",
-    precio : 180000
-  },
-  { nombre : "adidasCourt",
-    precio : 195000
-  },
-  { nombre : "adidasAdvantage",
-    precio : 275000
-  }
+/*// Seleccionamos la imagen principal
+const mainImage = document.getElementById('mainImage');
 
-]
+// Seleccionamos todas las miniaturas
+const thumbnails = document.querySelectorAll('.thumbnail');
+
+// Añadimos un evento de clic a cada miniatura
+thumbnails.forEach((thumbnail) => {
+  thumbnail.addEventListener('click', function() {
+    // Cambiamos la imagen principal por la que se clicó
+    mainImage.src = this.src;
+  });
+});*/
 // Variables
-let tenisBase = document.getElementById('tenisBase').value; /// ENSAYO PARA GUARDAR VALOR DE CADA TENIS// ES MEJOR HACERLO EN LA FUNCION QUE RELACIONA LOS TENIS
 const cantidadInput = document.getElementById('cantidad');
 const precioSpan = document.getElementById('precio');
 const precioTotalSpan = document.getElementById('precioTotal');
@@ -23,13 +20,11 @@ const agregarCarritoBtn = document.getElementById('agregarCarrito');
 // Función para calcular el precio total
 function calcularPrecioTotal() {
   const cantidad = parseInt(cantidadInput.value);
-  //const precioUnitario = parseFloat(precioSpan.textContent);// DEBO MODIFICAR ESTE VALOR CON LA FUNCION QUE RELACIONA LOS TENIS
-  //const precioUnitario = parseFloat(precioSpan.textContent)
-  const precioUnitario = parseFloat(precioSpan.textContent.replace(/\./g, '').replace(/,/g, '.'));
+  const precioUnitario = parseFloat(precioSpan.textContent);
   const precioTotal = cantidad * precioUnitario;
   
   // Mostrar el precio total
-  precioTotalSpan.textContent = precioTotal.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  precioTotalSpan.textContent = precioTotal.toFixed(2);
 }
 
 // Evento para actualizar el precio total al cambiar la cantidad
@@ -37,13 +32,20 @@ cantidadInput.addEventListener('input', calcularPrecioTotal);
 
 // Evento al hacer clic en "Agregar al carrito"
 agregarCarritoBtn.addEventListener('click', function() {
-  /*const talla = document.getElementById('talla').value;
-  const tenisBase = document.getElementById('tenisBase').value;
-  const logo = document.getElementById('logo').value;
-  const cordon = document.getElementById('cordon').value;
-  const diseño = document.getElementById('diseño').value;
+  const talla = document.getElementById('talla').value;
+  const color = document.getElementById('color').value;
+  const colorCordon = document.getElementById('cordon').value;
+  const horma = document.getElementById('horma').value;
   const cantidad = cantidadInput.value;
-  const precioTotal = precioTotalSpan.textContent;*/
+  const precioTotal = precioTotalSpan.textContent;
+  
+  alert(`Has agregado al carrito:
+    Talla: ${talla}
+    Color: ${color}
+    Color del cordón: ${colorCordon}
+    Horma: ${horma}
+    Cantidad: ${cantidad}
+    Precio total: $${precioTotal}`);
 });
 const mainImage = document.getElementById('mainImage');//ubicar la imagen donde se posiciona zapato base
 const img1 = document.getElementById('imagen1');//ubicar la imagen donde se posiciona cordon
@@ -74,40 +76,20 @@ function imagenDiseño() {
     img3.src = '../StepCraft-pagina-web/PersonalizacionJulian/mod6.png'; // Imagen para Avatar
   }
 }
-// Función para cambiar la imagen según el Tenis Base seleccionado    |||| AGREGAR CAMBIO DE VALOR
-
+// Función para cambiar la imagen según el Tenis Base seleccionado
 function imagenTenisbase() {
   const tenisBase = tenisBaseSelect.value;
   // Cambiar la imagen dependiendo del valor seleccionado
   if (tenisBase === 'n/a') {
       mainImage.src = '../StepCraft-pagina-web/PersonalizacionJulian/0logo_zapateria_2.png'; // Imagen logo
-      precioUnitario = 0
-      precioSpan.textContent = precioUnitario.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      
   } else if (tenisBase === 'nikeDunk') {
       mainImage.src = '../StepCraft-pagina-web/PersonalizacionJulian/1nikedunklow.png'; // Imagen para nikeDunk
-      let busqueda = productos.find(nombre => nombre.nombre === tenisBase)
-      precioUnitario = busqueda.precio
-      precioSpan.textContent = precioUnitario.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      
   } else if (tenisBase === 'adidasCourt') {
       mainImage.src = '../StepCraft-pagina-web/PersonalizacionJulian/2adidascourtblock.png'; // Imagen para adidasCourt
-      let busqueda = productos.find(nombre => nombre.nombre === tenisBase)
-      precioUnitario = busqueda.precio
-      precioSpan.textContent = precioUnitario.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      
   } else if (tenisBase === 'adidasAdvantage') {
       mainImage.src = '../StepCraft-pagina-web/PersonalizacionJulian/3adidasadvantage.png'; // Imagen para adidasAdvantage
-      let busqueda = productos.find(nombre => nombre.nombre === tenisBase)
-      precioUnitario = busqueda.precio
-      precioSpan.textContent = precioUnitario.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      
   } else if (tenisBase === 'nikePegasus') {
       mainImage.src = '../StepCraft-pagina-web/PersonalizacionJulian/4nikepegasus.png'; // Imagen para nikePegasus
-      let busqueda = productos.find(nombre => nombre.nombre === tenisBase)
-      precioUnitario = busqueda.precio
-      precioSpan.textContent = precioUnitario.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      
   } 
 }
 // Función para cambiar la imagen según el Tenis Base seleccionado
@@ -143,40 +125,8 @@ function imagenLogo() {
   } 
 }
 
-// Escuchar el evento de cambio en el select de diseño,logo,cordon, tenis base
+// Escuchar el evento de cambio en el select de diseño
 diseñoSelect.addEventListener('change', imagenDiseño);
 logoSelect.addEventListener('change', imagenLogo);
 cordonSelect.addEventListener('change', imagenCordon);
 tenisBaseSelect.addEventListener('change', imagenTenisbase);
-tenisBaseSelect.addEventListener('change', calcularPrecioTotal);
-
-//////////////////////////////////////////////////////////////CARRITO/////////////////////////////////////////////
-// Función para calcular el precio total
-function calcularPrecioTotal2(precioUnitario, cantidad) {
-  return precioUnitario * cantidad;
-  }
-  
-// Función que guarda la selección del usuario
-document.getElementById("agregarCarrito").addEventListener("click", function() {
-// Capturamos los valores seleccionados por el usuario
-  const productoSeleccionado = {
-      talla: document.getElementById("talla").value,
-      tenisBase: document.getElementById("tenisBase").value,
-      logo: document.getElementById("logo").value,
-      cordon: document.getElementById("cordon").value,
-      diseño: document.getElementById("diseño").value,
-      cantidad: document.getElementById("cantidad").value,
-      precioUnitario: document.getElementById("precio").innerText,
-      precioTotal: document.getElementById("precioTotal").innerText
-  }
-
-  // Mostramos el precio total en la página
- // document.getElementById("precioTotal").innerText = productoSeleccionado.precioTotal;
-
-  // Guardamos el producto en el localStorage
-  let carrito = JSON.parse(localStorage.getItem("carrito")) || []; // Recuperamos el carrito existente o creamos uno nuevo
-  carrito.push(productoSeleccionado); // Añadimos el producto al carrito
-  localStorage.setItem("carrito", JSON.stringify(carrito)); // Guardamos el carrito actualizado
-
-  alert("Producto agregado al carrito")
-});

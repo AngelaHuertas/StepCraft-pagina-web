@@ -138,7 +138,7 @@ html, body{
   
   button {
     padding: 10px 20px;
-    background-color: #75b9d4a3;
+    background-color: #75b9d4;
     color: rgb(1, 1, 1);
     border: none;
     cursor: pointer;
@@ -146,13 +146,11 @@ html, body{
     font-size: 17px;
     max-width: 80%;
     font-weight: bold;
-    transition: all 0.3s ease;
   }
+  
   button:hover {
-    background-color: #75b9d4;
-    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
-}
+    background-color: #53e7ca;
+  }
   .totales{
     font-size: 10px;
     color: black;
@@ -228,9 +226,5 @@ html, body{
   }
   .rowdirection {
     flex-direction: row;
-  }
-  .col{
-    width: 30%;
-    display: inline-block;
   }
 

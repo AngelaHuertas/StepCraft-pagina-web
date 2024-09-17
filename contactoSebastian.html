@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactos</title>
-    <link rel="icon" href="./logo_zapateria.png" type="image/x-icon">
-    <link rel="stylesheet" href="cabezaraPaginas.css">
+    <link rel="icon" href="./imgCabecera/logo_zapateria.png" type="image/x-icon">
+    <link rel="stylesheet" href="cabeceraPaginas.css">
     <link rel="stylesheet" type="text/css" href="contacto.css">
     <link rel="stylesheet" href="footer.css">
 </head>
 <body>
     <header>
-        <!--Barra de navegación-->
-        <div class="header-content">
+     <!--Barra de navegación-->
+     <div class="header-content">
 
-            <!--Logotipo -->
-            <div class="logo">
-                <a href="./paginaPrincipalAngela.html" class="ini-icon"><img src="logo_zapateria_2.png" alt="Logotipo de la tienda"></a>
-            </div>
+        <!--Logotipo -->
+        <div class="logo">
+            <a href="./paginaPrincipalAngela.html" class="ini-icon"><img src="./imgCabecera/logo_zapateria_2.png" alt="Logotipo de la tienda"></a>
+        </div>
 
         <!--menu-->
         <div class="menu">
@@ -25,43 +25,42 @@
                 <ul>
                     <li><a href="./ofertasShaira.html"> Ofertas</a></li>
                     <li class="menu-selected"><a href="./contactoSebastian.html" class="text-menu-selected"> Contactos</a></li>
-                 
+                    <li><a href="./blog.html"> Blog </a></li>
                 </ul>
             </nav>
         </div>
 
-            <!-- Buscador -->
-            <div class="search" id="buscador">
-                <img id="icon-buscador" src="./buscador.png">
-            </div>
-                                
-
-            <!--Carrito-->
-            <div class="carrito">
-                <a href="./carritoJulian.html" class="cart-icon">
-                    <img src="./carrito.png" alt="Carrito de Compras">
-                </a>
-            </div>
+        <!--Carrito-->
+        <div class="carrito">
+            <a href="./carritoJulian.html" class="cart-icon">
+                <img src="./imgCabecera/carrito.png" alt="Carrito de Compras">
+            </a>
         </div>
-    </div>
+        
+
+        <!-- Buscador -->
+        <div class="search" id="buscador">
+            <img id="icon-buscador" src="./imgCabecera/buscador.png">
+        </div>
+
     </header> 
 
-    <div id="contenedor-buscador">
-        <input type="text" id="inputSearch" placeholder="Buscar productos...">
-    </div>
+<div id="contenedor-buscador">
+    <input type="text" id="inputSearch" placeholder="Buscar productos...">
+</div>
 
-    <ul id="caja-busqueda">
-        <li><a href="#"><img src="./buscador.png">Nike</a></li>
-        <li><a href="./personalizacionJulian.html"><img src="./buscador.png">Nike Dunk Low</a></li>
-        <li><a href="./personalizacionJulian.html"><img src="./buscador.png">Nike Pegasus Trail 5</a></li>
-        <li><a href="#"><img src="./buscador.png">Adidas</a></li>
-        <li><a href="./personalizacionJulian.html"><img src="./buscador.png">Adidas Tenis Advantage Base</a></li>
-        <li><a href="./personalizacionJulian.html"><img src="./buscador.png">Adidas Tenis Courtblock</a></li>
-    </ul>
+<ul id="caja-busqueda">
+    <li><a href="#"><img src="./imgCabecera/buscador.png">Nike</a></li>
+    <li><a href="./personalizacionJulian.html"><img src="./imgCabecera/buscador.png">Nike Dunk Low</a></li>
+    <li><a href="./personalizacionJulian.html"><img src="./imgCabecera/buscador.png">Nike Pegasus Trail 5 Personalizables</a></li>
+    <li><a href="#"><img src="./imgCabecera/buscador.png">Adidas</a></li>
+    <li><a href="./personalizacionJulian.html"><img src="./imgCabecera/buscador.png">Adidas Tenis Advantage Base</a></li>
+    <li><a href="./personalizacionJulian.html"><img src="./imgCabecera/buscador.png">Adidas Tenis Courtblock</a></li>
+</ul>
 
-    <div id="cover-buscador">
+<div id="cover-buscador">
 
-    </div>
+</div>
   
 <script src="./paginaprincipal.js"></script>
 
@@ -69,59 +68,62 @@
         <div class="formulario">			
             <h1>Formulario de contacto</h1>
             <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
-            <form action="submeter-formulario.php" method="post" enctype="multipart/form-data">
+            <form action="submeter-formulario.php" method="post">				
+  
                 <p>
                     <label for="nombre" class="colocar_nombre">Nombre
                         <span class="obligatorio">*</span>
                     </label>
-                    <input type="text" name="introducir_nombre" id="nombre" required placeholder="Escribe tu nombre">
+                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
                 </p>
-                
+            
                 <p>
                     <label for="email" class="colocar_email">Email
                         <span class="obligatorio">*</span>
                     </label>
-                    <input type="email" name="introducir_email" id="email" required placeholder="Escribe tu Email">
+                        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
                 </p>
-                
+        
                 <p>
                     <label for="telefone" class="colocar_telefono">Teléfono
                     </label>
-                    <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
-                </p>
-                
+                        <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                </p>		
+            
                 <p>
                     <label for="address" class="colocar_address">Dirección
                     </label>
-                    <input type="text" name="introducir_address" id="address" placeholder="Escribe la dirección">
-                </p>
-                
+                        <input type="text" name="introducir_address" id="address" placeholder="Escribe la dirección">
+                </p>		
+            
                 <p>
                     <label for="asunto" class="colocar_asunto">Asunto
                         <span class="obligatorio">*</span>
                     </label>
-                    <input type="text" name="introducir_asunto" id="asunto" required placeholder="Escribe un asunto">
+                        <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
                 </p>
-                
                 <p>
                     <label for="archivos" class="coolcar_archivos">Archivos
                         <samp class="obligatorio">*</samp>
                     </label>
-                    <input type="file" name="introducir_archivos" id="archivos" required>
-                </p>
-                
+                    <form method="post" action="/send/" enctype="multipart/form-data">
+                        <input type="file">
+                      </form>
+                </p>		
+            
                 <p>
                     <label for="mensaje" class="colocar_mensaje">Mensaje
                         <span class="obligatorio">*</span>
-                    </label>
-                    <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required placeholder="Deja aquí tu comentario..."></textarea>
-                </p>
-                
+                    </label>                     
+                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                    </p>	  								
+            
                 <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
-                
+
                 <p class="aviso">
                     <span class="obligatorio"> * </span>los campos son obligatorios.
-                </p>
+                </p>					
+                    
             </form>
         </div>	
     </div>
