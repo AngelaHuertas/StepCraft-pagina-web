@@ -15,7 +15,7 @@ header {
     top: 0;
     width: 100%;
     height: 80px;
-    justify-content: center;
+    justify-content: space-between; 
     background-color: #fcf6f6;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
     z-index: 100;
@@ -25,14 +25,20 @@ header {
     max-width: 1200px;
     margin: auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
 }
 
 /* Estilo para el logotipo */
 .logo img {
     max-height: 60px;
+}
+
+/* Contenedor para el menú, carrito y buscador */
+.header-right {
+    display: flex;
+    align-items: center;
 }
 
 /* Estilo para la barra de navegación */
@@ -84,19 +90,36 @@ header {
     color: #629ab1;
 }
 
+/*menu celular*/
+
+#icon-menu img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+}
+
+
 /* Estilo para el buscador */
 .search img {
     max-height: 30px;
 }
 
 #contenedor-buscador{
-position: fixed;
-top: -10px;
-width: 100%;
-background: #ffffff;
-padding: 20px;
-z-index: 9;
-transition: all 600ms;
+    position: fixed;
+    top: -10px;
+    width: 100%;
+    background: #ffffff;
+    padding: 20px;
+    z-index: 9;
+    transition: all 600ms;
 }
 
 #contenedor-buscador input{
@@ -157,7 +180,7 @@ transition: all 600ms;
     align-items: center;
 }
 
-/* Para ajusta la separación de las imagenes */
+/* Para ajustar la separación de las imágenes */
 .header-content .logo,
 .header-content .search,
 .header-content .carrito {
